@@ -7,6 +7,10 @@ export const Heading = styled.header`
   padding: 10px 40px;
   height: 80px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 10px 10px;
+  }
 `;
 
 export const Logo = styled.div`
