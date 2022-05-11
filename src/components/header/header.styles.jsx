@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Heading = styled.header`
   display: flex;
+  background-color: rgba(29, 29, 29, 0.85);
   justify-content: space-between;
+  backdrop-filter: blur(5px);
   position: fixed;
   padding: 10px 40px;
   height: 80px;
