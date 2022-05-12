@@ -2,11 +2,13 @@
   height: 100vh;
 }
 
+
 .content {
   display: flex;
   flex-direction: column;
   padding: 0 150px;
 }
+
 
 @media (max-width: 1080px) {
   .content {

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <main className='content'>
+      <main className='content blur'>
         <Hero />
       </main>
     </div>

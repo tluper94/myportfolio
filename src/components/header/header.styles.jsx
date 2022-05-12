@@ -9,6 +9,7 @@ export const Heading = styled.header`
   padding: 10px 40px;
   height: 80px;
   width: 100%;
+  z-index: 1;
 
   @media (max-width: 768px) {
     padding: 10px 10px;
@@ -31,12 +32,15 @@ export const Logo = styled.div`
 
 export const MenuBtn = styled.div`
   display: none;
+  position: relative;
+  z-index: 10;
   float: right;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 50px;
   color: #08fdd8;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     display: flex;
