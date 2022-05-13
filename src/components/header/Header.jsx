@@ -12,23 +12,21 @@ const Header = () => {
     setActivate((prevState) => !prevState);
   };
 
-  const onFocusOut = (e) => {
-    console.log(e);
-    setActivate(false);
-  };
   return (
     <>
       <Heading id='header'>
-        <Logo>
-          <CgTerminal size='45px' />
-          <h2>TL</h2>
-        </Logo>
+        <a href='#hero'>
+          <Logo>
+            <CgTerminal size='45px' />
+            <h2>TL</h2>
+          </Logo>
+        </a>
         <div>
           <MenuBtn onClick={displayMenu}>
             {activate ? <BiX size='50px' /> : <BiMenuAltRight size='70px' />}
           </MenuBtn>
+          <Menu activate={activate} setActivate={setActivate} />
           <GlobalStyle activate={activate} />
-          <Menu onFocusOut={onFocusOut} activate={activate} />
         </div>
         <NavItems>
           <NavLink>
