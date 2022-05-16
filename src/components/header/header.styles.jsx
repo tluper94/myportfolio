@@ -10,6 +10,9 @@ export const Heading = styled.header`
   height: 80px;
   width: 100%;
   z-index: 1;
+  transform: ${(props) =>
+    props.hide ? 'translatey(-80px)' : 'translatey(0px)'};
+  transition: all 0.25s cubic-bezier(0.25, 0.5, 0.75, 1);
 
   @media (max-width: 768px) {
     padding: 10px 10px;

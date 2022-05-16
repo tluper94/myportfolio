@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Heading, MenuBtn, Logo, NavItems, NavLink } from './header.styles';
 import { BiMenuAltRight, BiX } from 'react-icons/bi';
 import { CgTerminal } from 'react-icons/cg';
 import Menu from '../menu/Menu';
 import { GlobalStyle } from '../menu/Menu.styles';
+import { useScrollDirection } from '../../customHooks/useScrollDirection';
 
 const Header = () => {
   const [activate, setActivate] = useState(false);
+  const [hideNavBar, setHideNavBar] = useState(false);
 
   const displayMenu = () => {
     setActivate((prevState) => !prevState);
   };
 
+  const scrollDirection = useScrollDirection();
+
+  useEffect(() => {
+    if (scrollDirection === 'down') {
+      setHideNavBar(true);
+    } else {
+      setHideNavBar(false);
+    }
+  }, [scrollDirection]);
+
+  console.log(hideNavBar);
+
   return (
     <>
-      <Heading id='header'>
-        <a href='#hero'>
+      <Heading hide={hideNavBar} id='header'>
+        <a href='/'>
           <Logo>
             <CgTerminal size='45px' />
             <h2>TL</h2>
