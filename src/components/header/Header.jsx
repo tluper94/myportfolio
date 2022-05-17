@@ -6,25 +6,28 @@ import Menu from '../menu/Menu';
 import { GlobalStyle } from '../menu/Menu.styles';
 import { useScrollDirection } from '../../customHooks/useScrollDirection';
 
-const Header = () => {
+const Header = ({ focus, setFocus }) => {
   const [activate, setActivate] = useState(false);
   const [hideNavBar, setHideNavBar] = useState(false);
 
   const displayMenu = () => {
     setActivate((prevState) => !prevState);
+    setFocus(false);
   };
 
   const scrollDirection = useScrollDirection();
 
   useEffect(() => {
-    if (scrollDirection === 'down') {
+    if (scrollDirection === 'down' && !activate) {
       setHideNavBar(true);
     } else {
       setHideNavBar(false);
     }
-  }, [scrollDirection]);
 
-  console.log(hideNavBar);
+    if (focus) {
+      setActivate(false);
+    }
+  }, [scrollDirection, activate, focus]);
 
   return (
     <>
