@@ -22,6 +22,6 @@ export const BigHeading = styled.h2`
   color: ${(props) => props.color || 'white'};
 
   @media (max-width: 768px) {
-    font-size: 11vw;
+    font-size: 2.5rem;
   }
 `;
