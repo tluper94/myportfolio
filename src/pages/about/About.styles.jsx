@@ -9,3 +9,6 @@ export const AboutSection = styled.section`
   min-height: 100vh;
   color: white;
 `;
+
+
+
