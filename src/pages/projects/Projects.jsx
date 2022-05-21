@@ -9,10 +9,10 @@ import {
 import Project from '../../components/project/Project';
 
 const projects = [
-  { name: 'project1', url: 'trevorluper.com' },
-  { name: 'project2', url: 'trevorluper.com' },
-  { name: 'project3', url: 'trevorluper.com' },
-  { name: 'project4', url: 'trevorluper.com' },
+  { id: 1, name: 'project1', url: 'trevorluper.com' },
+  { id: 2, name: 'project2', url: 'trevorluper.com' },
+  { id: 3, name: 'project3', url: 'trevorluper.com' },
+  { id: 4, name: 'project4', url: 'trevorluper.com' },
 ];
 
 const Projects = () => {
@@ -22,8 +22,8 @@ const Projects = () => {
         <BigHeading>My Featured Projects</BigHeading>
       </ProjectTitleContainer>
       <ProjectsContainer>
-        {projects.map(({ name, url }) => (
-          <Project name={name} url={url} />
+        {projects.map(({ name, url, id }) => (
+          <Project key={id} name={name} url={url} />
         ))}
       </ProjectsContainer>
     </ProjectsSection>

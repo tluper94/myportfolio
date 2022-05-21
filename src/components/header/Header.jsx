@@ -32,12 +32,10 @@ const Header = ({ focus, setFocus }) => {
   return (
     <>
       <Heading hide={hideNavBar} id='header'>
-        <a href='/'>
-          <Logo>
-            <CgTerminal size='45px' />
-            <h2>TL</h2>
-          </Logo>
-        </a>
+        <Logo href='/'>
+          <CgTerminal size='45px' />
+          <h2>TL</h2>
+        </Logo>
         <div>
           <MenuBtn onClick={displayMenu}>
             {activate ? <BiX size='50px' /> : <BiMenuAltRight size='70px' />}
