@@ -22,6 +22,15 @@ export const ProjectTitleContainer = styled.div`
   align-content: center;
   align-items: flex-start;
   width: 100%;
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -5px;
+    height: 1px;
+    width: 200px;
+    margin-left: 20px;
+  }
 `;
 
 export const BigHeading = styled.h1`

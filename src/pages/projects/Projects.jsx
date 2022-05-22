@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <ProjectsSection id='projects'>
       <ProjectTitleContainer>
-        <BigHeading>My Featured Projects</BigHeading>
+        <BigHeading>Some of my projects</BigHeading>
       </ProjectTitleContainer>
       <ProjectsContainer>
         {projects.map(({ name, url, id }) => (
