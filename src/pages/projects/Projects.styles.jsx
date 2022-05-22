@@ -16,11 +16,11 @@ export const ProjectsContainer = styled.section`
   color: white;
 `;
 
-export const ProjectTitleContainer = styled.div`
+export const ProjectTitleContainer = styled.h2`
   display: flex;
   justify-content: center;
   align-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   &::after {
     content: '';
@@ -30,6 +30,7 @@ export const ProjectTitleContainer = styled.div`
     height: 1px;
     width: 200px;
     margin-left: 20px;
+    background-color: white;
   }
 `;
 

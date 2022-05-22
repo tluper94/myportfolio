@@ -18,9 +18,7 @@ const projects = [
 const Projects = () => {
   return (
     <ProjectsSection id='projects'>
-      <ProjectTitleContainer>
-        <BigHeading>Some of my projects</BigHeading>
-      </ProjectTitleContainer>
+      <ProjectTitleContainer>Some of my projects</ProjectTitleContainer>
       <ProjectsContainer>
         {projects.map(({ name, url, id }) => (
           <Project key={id} name={name} url={url} />
