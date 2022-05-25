@@ -18,22 +18,31 @@ export const ProjectsContainer = styled.section`
 
 export const ProjectTitleContainer = styled.h2`
   display: flex;
-  justify-content: center;
-  align-content: center;
+  position: relative;
   align-items: center;
   width: 100%;
+  font-size: clamp(26px, 5vw, 32px);
+  white-space: nowrap;
+  &::before {
+    position: relative;
+    counter-increment: section 1;
+    content: '0' counter(section) '.';
+    margin-right: 10px;
+    color: #08fdd8;
+    font-size: clamp(26px, 5vw, var(15px));
+  }
   &::after {
     content: '';
     display: block;
     position: relative;
-    top: -5px;
+    top: 0px;
     height: 1px;
     width: 200px;
-    margin-left: 20px;
-    background-color: white;
+    margin-left: 10px;
+    background-color: #6b6b6b;
   }
 `;
 
 export const BigHeading = styled.h1`
-  font-size: 5vw;
+  font-size: 4vw;
 `;
