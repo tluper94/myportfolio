@@ -23,6 +23,7 @@ export const ProjectTitleContainer = styled.h2`
   width: 100%;
   font-size: clamp(26px, 5vw, 32px);
   white-space: nowrap;
+  margin-bottom: 40px;
   &::before {
     position: relative;
     counter-increment: section 1;
