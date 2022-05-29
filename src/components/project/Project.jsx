@@ -1,10 +1,15 @@
 import React from 'react';
-import { ProjectContainer } from './Project.styles';
+import {
+  ProjectContainer,
+  ProjectContent,
+  ProjectImage,
+} from './Project.styles';
 
-const Project = ({ name, url }) => {
+const Project = ({ name, url, children }) => {
   return (
     <ProjectContainer href={url}>
-      <div>{name}</div>
+      <ProjectContent> Name </ProjectContent>
+      <ProjectImage src='' />
     </ProjectContainer>
   );
 };

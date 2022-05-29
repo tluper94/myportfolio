@@ -12,7 +12,7 @@ export const Heading = styled.header`
   z-index: 1;
   transform: ${(props) =>
     props.hide ? 'translatey(-80px)' : 'translatey(0px)'};
-  transition: all 0.15s cubic-bezier(0.25, 0.5, 0.75, 1) 300ms;
+  transition: all 0.15s cubic-bezier(0.25, 0.5, 0.75, 1) 100ms;
 
   @media (max-width: 768px) {
     padding: 10px 10px;

@@ -21,7 +21,9 @@ const Projects = () => {
       <ProjectTitleContainer>Some of my projects</ProjectTitleContainer>
       <ProjectsContainer>
         {projects.map(({ name, url, id }) => (
-          <Project key={id} name={name} url={url} />
+          <Project key={id} name={name} url={url}>
+            My Desc
+          </Project>
         ))}
       </ProjectsContainer>
     </ProjectsSection>
