@@ -5,7 +5,7 @@ import {
   ProjectTitleContainer,
   BigHeading,
 } from './Projects.styles';
-
+import drumKitImg from '../../images/DrumkitPreview.png'
 import Project from '../../components/project/Project';
 
 const projects = [
@@ -20,7 +20,7 @@ const Projects = () => {
     <ProjectsSection id='projects'>
       <ProjectTitleContainer>Some of my projects</ProjectTitleContainer>
       <ProjectsContainer>
-        <Project name='Drum-Kit' ></Project>
+        <Project name='Drum-Kit' img={drumKitImg} ></Project>
       </ProjectsContainer>
     </ProjectsSection>
   );
