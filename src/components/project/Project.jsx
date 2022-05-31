@@ -8,7 +8,7 @@ import {
 const Project = ({ name, url, children }) => {
   return (
     <ProjectContainer href={url}>
-      <ProjectContent> Name </ProjectContent>
+      <ProjectContent> {name} </ProjectContent>
       <ProjectImage src='' />
     </ProjectContainer>
   );
